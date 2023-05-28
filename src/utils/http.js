@@ -1,4 +1,5 @@
 //axios基础的封装
+//关于axios的配置一般单独封装在1个文件中，便于维护
 import axios from 'axios'
 const httpInstance = axios.create({
   baseURL: 'http://pcapi-xiaotuxian-front-devtest.itheima.net',
