@@ -1,7 +1,11 @@
+
+
 //吸顶导航交互组件
 
 <script setup>
+//调用pinia中定义的的获取数据方法
 import { useCategoryStore } from '@/stores/category';
+
 // 利用vueUse 一种在vue3推出后基于组合式api封装好的函数
 import { useScroll } from '@vueuse/core'
 //usescroll函数返回当前滚动距离，存储在y中，当y>80时显示吸顶导航
@@ -13,6 +17,7 @@ const CategoryStore = useCategoryStore()
 </script>
 
 <template>
+  <!-- 当滚动距离>80时赋予show类型，显示吸顶导航 -->
   <div class="app-header-sticky" :class="{show: y > 80}">
     <div class="container">
       <RouterLink class="logo" to="/" />
@@ -22,7 +27,7 @@ const CategoryStore = useCategoryStore()
           <RouterLink to="/">首页</RouterLink>
         </li>
         <!-- v-for将get到的数据渲染到head上 -->
-        <li class="home" v-for="item in CategoryStore.getCategoryList" :key="item.id">
+        <li class="home" v-for="item in CategoryStore.CategoryList" :key="item.id">
           <RouterLink to="/">{{item.name}}</RouterLink>
         </li>
       </ul>
