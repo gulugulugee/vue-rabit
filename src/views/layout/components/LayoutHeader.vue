@@ -15,7 +15,10 @@ const CategoryStore = useCategoryStore()
       <ul class="app-header-nav">
         <!-- v-for将get到的数据渲染到head上 -->
         <li class="home" v-for="item in CategoryStore.CategoryList" :key="item.id">
-          <RouterLink to="/">{{item.name}}</RouterLink>
+          
+          <!-- 每个一级分类页面有唯一的id，以id为基准申请数据 -->
+
+          <RouterLink :to="`/category/${item.id}`">{{item.name}}</RouterLink>
         </li>
       </ul>
       <div class="search">
