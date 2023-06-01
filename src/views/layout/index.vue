@@ -16,9 +16,10 @@ onMounted(() => CategoryStore.getCategory())
 </script>
 
 <template>
+  <LayoutHeader />
   <LayoutNav />
   <RouterView />
-  <LayoutHeader />
+  <!-- <LayoutHeader /> -->
   <LayoutFooter />
   <LayoutFixed />
 </template>
