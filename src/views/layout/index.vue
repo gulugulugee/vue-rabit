@@ -18,8 +18,11 @@ onMounted(() => CategoryStore.getCategory())
 <template>
   <LayoutHeader />
   <LayoutNav />
+
+  <!-- 添加key 破坏复用机制 强制销毁重建-->
+  <!-- <RouterView :key="$route.fullPath"/> -->
+  <!-- 但这个方法会导致多请求一次banner造成浪费(banner都相同) -->
   <RouterView />
-  <!-- <LayoutHeader /> -->
   <LayoutFooter />
   <LayoutFixed />
 </template>
