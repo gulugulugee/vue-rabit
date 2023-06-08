@@ -52,4 +52,9 @@ git add README.md
 git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/gulugulugee/vue-rabit.git
-git push -u origin main
+git push -u origin master
+
+
+
+12056258282
+hm#qd@23!
