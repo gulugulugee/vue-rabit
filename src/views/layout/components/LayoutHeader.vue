@@ -17,7 +17,7 @@ const CategoryStore = useCategoryStore()
         <li class="home" v-for="item in CategoryStore.CategoryList" :key="item.id">
           
           <!-- 每个一级分类页面有唯一的id，以id为基准申请数据 -->
-
+          <!-- :to="`/category/${item.id}`" 控制跳转到哪个页面${item.id}填在router的id占位符中 -->
           <RouterLink active-class="active" :to="`/category/${item.id}`">{{item.name}}</RouterLink>
         </li>
       </ul>

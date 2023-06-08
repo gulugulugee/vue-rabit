@@ -1,9 +1,11 @@
-import request from '@/utils/http'
+import httpInstance from '@/utils/http'
 
 //获取一级商品分类
 export function getCategoryAPI (id)  {
-    return request ({
+    return httpInstance ({
+      //请求地址
         url: '/category',
+        //请求参数  params对应放到query位置
         params: {
             id
         }
@@ -13,7 +15,7 @@ export function getCategoryAPI (id)  {
 
 //获取二级商品分类
 export function getCategoryFilterAPI  (id)  {
-    return request({
+    return httpInstance({
       url:'/category/sub/filter',
       params:{
         id
@@ -32,7 +34,7 @@ export function getCategoryFilterAPI  (id)  {
  * @return {*}
  */
    export const getSubCategoryAPI = (data) => {
-    return request({
+    return httpInstance({
       url:'/category/goods/temporary',
       method:'POST',
       data
