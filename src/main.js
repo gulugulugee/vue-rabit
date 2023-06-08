@@ -10,7 +10,8 @@ import router from './router'
 import '@/styles/common.scss'
 const app = createApp(App)
 const pinia = createPinia()
-// 注册持久化组件
+// 注册持久化组件 保持本地数据和pinia数据时刻相同
+// 调整pinia中的数据就同步调整了本地数据
 pinia.use(piniaPluginPersistedstate)
 app.use(pinia)
 app.use(router)
