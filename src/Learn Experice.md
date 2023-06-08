@@ -55,6 +55,12 @@ git branch -M main
 git remote add origin https://github.com/gulugulugee/vue-rabit.git
 git push -u origin master
 
+git push -u gitee "master"
+//////////////////////////
+git add .
+git commit -m "401拦截处理"
+git push -u origin master
+git push -u gitee "master"
 
 
 12056258282
