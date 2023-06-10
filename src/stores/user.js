@@ -26,5 +26,6 @@ export const useUserStore = defineStore('user',() => {
         clearUserInfo
     }
 },{
+    // pinia数据与本地数据双向同步
     persist:true
 })
